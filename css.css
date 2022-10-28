@@ -163,7 +163,11 @@ fresh td {
   height: 20px;
   text-align: left;
 }
-
+H4{
+  font-weight: bold;
+  font-size: 15px;
+  color: #3f3f7c;
+}
 div th,
 div td {
   border: 1px solid black;
@@ -224,6 +228,7 @@ table{
   font-size: 15px;
   text-align: center;
   border: #3f3f7c;
+  width: 50%;
 }
 table th{
   /'color: #9a1c1c;
@@ -234,3 +239,5 @@ table th{
   color: #9b0505;
 }
 tr:hover {background-color: #3f3f7c;}
+
+

@@ -34,7 +34,7 @@
         </form>
         <br />
       </div>
-      <table id="inputTable" class="tab1">
+      <table id="inputTable" class="tab1" style="width: 80% " >
         <tr>
           <th>Process</th>
           <th>Arrival Time</th>
@@ -55,8 +55,8 @@
         </tr>
       </table><br>
     </div>
-    <input type="button" value="+" onclick="addRow();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input id="minus" type="button" value="-" onclick="deleteRow();" />
+    <input type="button" value="Add Process" onclick="addRow();" />&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="minus" type="button" value="Delete Process" onclick="deleteRow();" />
     <div></div><br>
     <p id="quantumParagraph" hidden>
       Quantum:
@@ -64,6 +64,7 @@
     </p>
     <input type="button" value="Solution" onclick="draw();" />
     <br /><br />
+    <H4>GANTT CHART: </H4><br><br>
 
     <fresh> </fresh>
     <br /><br />
