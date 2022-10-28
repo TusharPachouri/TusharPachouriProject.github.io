@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project</title>
+    <script src="javascript.js"></script>
+    <script src="jquery-3.6.1.js"></script>
+    <link href="css.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="links" style="--items: 5">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">ALGORITHMS</a>
+        <a href="#">CONTACT</a>
+
+        <span class="line"></span>
+      </nav>
+    </header>
+    <br /><br /><br /><br /><br /><br />
+    <div>
+      <div>
+        <h2 id="Algo">ALGORITHMS :</h2>
+        <br />
+        <form id="algorithm" >
+          <input id="inp1" type="radio" name="algorithm" value="fcfs" checked />
+          First Come First Serve Scheduling<br />
+          <input type="radio" name="algorithm" value="sjf" checked /> Shortest
+          Job First<br />
+
+          <input type="radio" name="algorithm" value="robin" checked /> Round
+          Robin
+        </form>
+        <br />
+      </div>
+      <table id="inputTable" class="tab1">
+        <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Execute Time</th>
+          <th class="servtime">Service Time</th>
+        </tr>
+        <tr>
+          <td>P0</td>
+          <td>0</td>
+          <td><input class="initial exectime" type="text" value="5" /></td>
+          <td class="servtime">-</td>
+        </tr>
+        <tr>
+          <td>P1</td>
+          <td>1</td>
+          <td><input class="initial exectime" value="3" /></td>
+          <td class="servtime">-</td>
+        </tr>
+      </table><br>
+    </div>
+    <input type="button" value="+" onclick="addRow();" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="minus" type="button" value="-" onclick="deleteRow();" />
+    <div></div><br>
+    <p id="quantumParagraph" hidden>
+      Quantum:
+      <input style="width: 50px" id="quantum" type="text" value="3" />
+    </p>
+    <input type="button" value="Solution" onclick="draw();" />
+    <br /><br />
+
+    <fresh> </fresh>
+    <br /><br />
+    <p>Timer: <strong id="timer"></strong> sec</p>
+    <br /><br />
+    <h3>1. First Come First Serve Scheduling:</h3>
+    <br />
+    <p>
+      The full form of FCFS Scheduling is First Come First Serve Scheduling.
+      FCFS Scheduling algorithm automatically executes the queued processes and
+      requests in the order of their arrival. It allocates the job that first
+      arrived in the queue to the CPU, then allocates the second one, and so on.
+      FCFS is the simplest and easiest CPU scheduling algorithm, managed with a
+      FIFO queue. FIFO stands for First In First Out. The FCFS scheduling
+      algorithm places the arriving processes/jobs at the very end of the queue.
+      So, the processes that request the CPU first get the allocation from the
+      CPU first. As any process enters the FIFO queue, its Process Control Block
+      (PCB) gets linked with the queue’s tail. As the CPU becomes free, the
+      process at the very beginning gets assigned to it. Even if the CPU starts
+      working on a longer job, many shorter ones have to wait after it. The FCFS
+      scheduling algorithm works in most of the batches of operating systems.
+    </p>
+    <br />
+    <h3>2. Shortest Job First (SJF) Scheduling:</h3>
+    <br />
+    <p>
+      Till now, we were scheduling the processes according to their arrival time
+      (in FCFS scheduling). However, SJF scheduling algorithm, schedules the
+      processes according to their burst time. In SJF scheduling, the process
+      with the lowest burst time, among the list of available processes in the
+      ready queue, is going to be scheduled next. However, it is very difficult
+      to predict the burst time needed for a process hence this algorithm is
+      very difficult to implement in the system.
+    </p>
+    <br />
+    <h3>3. Round Robin Scheduling Algorithm:</h3>
+    <br />
+    <p>
+      Round Robin scheduling algorithm is one of the most popular scheduling
+      algorithm which can actually be implemented in most of the operating
+      systems. This is the preemptive version of first come first serve
+      scheduling. The Algorithm focuses on Time Sharing. In this algorithm,
+      every process gets executed in a cyclic way. A certain time slice is
+      defined in the system which is called time quantum. Each process present
+      in the ready queue is assigned the CPU for that time quantum, if the
+      execution of the process is completed during that time then the process
+      will terminate else the process will go back to the ready queue and waits
+      for the next turn to complete the execution.
+    </p>
+    <img src="os-round-robin-scheduling-algorithm.png" class="center1" />
+    <br />
+    <br /><br /><br /><br />
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+      <div class="container text-center">
+        <p>Copyright &copy; CPU Scheduling By Tushar Pachouri</p>
+      </div>
+    </footer>
+  </body>
+</html>
